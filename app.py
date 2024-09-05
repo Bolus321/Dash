@@ -3,7 +3,7 @@ import plotly.express as px  # pip install plotly-express
 import streamlit as st  # pip install streamlit
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="Sales Dashboard", page_icon=":bar_chart:", layout="wide")
+st.set_page_config(page_title="GCL Holdings Sales Interactive Dashboard", page_icon=":bar_chart:", layout="wide")
 
 # ---- READ EXCEL ----
 @st.cache_data
@@ -52,7 +52,7 @@ if df_selection.empty:
     st.stop() # This will halt the app from further execution.
 
 # ---- MAINPAGE ----
-st.title(":bar_chart: Sales Dashboard")
+st.title(":bar_chart: GCL Holdings Sales Dashboard")
 st.markdown("##")
 
 # TOP KPI's
@@ -64,13 +64,13 @@ average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
     st.subheader("Total Sales:")
-    st.subheader(f"US $ {total_sales:,}")
+    st.subheader(f"Naira: {total_sales:,}")
 with middle_column:
     st.subheader("Average Rating:")
     st.subheader(f"{average_rating} {star_rating}")
 with right_column:
     st.subheader("Average Sales Per Transaction:")
-    st.subheader(f"US $ {average_sale_by_transaction}")
+    st.subheader(f"Naira: {average_sale_by_transaction}")
 
 st.markdown("""---""")
 
