@@ -111,6 +111,13 @@ left_column, right_column = st.columns(2)
 left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
 right_column.plotly_chart(fig_product_sales, use_container_width=True)
 
+# ---- FOOTER ----
+footer_html = """<div style='text-align: center;'>
+  <p>Developed with ❤ by Nnamdi Ogbolu <a href="https://github.com/Bolus321">Github</a>
+  <br>This is a Portfolio Project for <a href="https://www.alxafrica.com">ALX SWE</a> & <a href="https://www.holbertonschool.com">Holberton School</a> </p>
+</div>"""
+st.markdown(footer_html, unsafe_allow_html=True)
+
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
