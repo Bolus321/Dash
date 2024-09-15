@@ -4,7 +4,7 @@
 Sales Dashboard built-in Python and Streamlit library to visualize data from Excel.
 
 ## Video Tutorial
-[![YouTube Video] https://youtu.be/vyMVqvzRceM
+[YouTube Video] https://youtu.be/vyMVqvzRceM
 
 ## Run the app
 ```Powershell
